@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgba(237, 246, 247, 0.43);
+}
+
+header{
+    text-align: center;
+    padding: 38px 0px;
+    background: #ffffff;
+    box-shadow: 0 0 3px 0px #00000030;
+    margin-bottom: 30px;
+}
+.project-title{
+    position: relative;
+}
+.project-title h3{
+    margin: 0;
+    color: #2398a7;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.github-link{
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+.github-link img{
+    width: 60px;
+}
+.main-wrapper .navigation{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    min-height: 50vh;
+    justify-content: space-evenly;
+}
+.navigation a{
+    background: #2398a7;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    width: 200px;
+}
+.navigation a:hover{
+    background: #175861;
+}
+
+
+/* Drag Me Any Where */
+
+.dragMeAnyWhere{
+    background: #84c2e8;
+    position: absolute;
+    padding: 30px 20px;
+    color: #fff;
+    left: 5px;
+    cursor: pointer;
+}
