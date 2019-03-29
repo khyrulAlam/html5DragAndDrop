@@ -61,3 +61,33 @@ header{
     left: 5px;
     cursor: pointer;
 }
+/* Drag And Drop List */
+.drag-list-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.drag-list-wrapper .left-list{
+    flex-basis: 40vw;
+    height: 400px;
+    background: #fff;
+    box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.12);
+    padding: 5px;
+    
+}
+.drag-list-wrapper .right-list{
+    flex-basis: 40vw;
+    height: 400px;
+    background: #fff;
+    box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.12);
+    padding: 5px;
+}
+.drag-list-wrapper .left-list .dragMe{
+    padding: 10px 5px;
+    background: #68d1ff;
+    border: 2px solid #81b0c5;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
