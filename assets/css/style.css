@@ -64,10 +64,10 @@ header{
 /* Drag And Drop List */
 .drag-list-wrapper{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .drag-list-wrapper .left-list{
-    flex-basis: 40vw;
+    flex-basis: 30vw;
     height: 400px;
     background: #fff;
     box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.12);
@@ -75,13 +75,32 @@ header{
     
 }
 .drag-list-wrapper .right-list{
-    flex-basis: 40vw;
+    flex-basis: 30vw;
     height: 400px;
     background: #fff;
     box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.12);
     padding: 5px;
 }
-.drag-list-wrapper .left-list .dragMe{
+.drag-list-wrapper .left-list h3{
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    color: #F44336;
+    border-bottom: 1px solid #F44336;
+    text-transform: uppercase;
+}
+.drag-list-wrapper .right-list h3{
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    color: #4CAF50;
+    border-bottom: 1px solid #4CAF50;
+    text-transform: uppercase;
+}
+.drag-list-wrapper .left-list .dragMe,
+.drag-list-wrapper .right-list .dragMe{
     padding: 10px 5px;
     background: #68d1ff;
     border: 2px solid #81b0c5;
