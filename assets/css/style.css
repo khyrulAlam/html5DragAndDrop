@@ -110,3 +110,39 @@ header{
     margin-bottom: 5px;
     cursor: pointer;
 }
+
+/* drag and copy */
+.dragCopyWrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+.draggableElement{
+    flex-basis: 20vw;
+    height: 400px;
+    background: #fff;
+    box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.12);
+    padding: 5px;
+
+}
+.dragCopyWrapper .dropHere{
+    flex-basis: 60vw;
+    height: 400px;
+    background: #fff;
+    box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.12);
+    padding: 5px;
+    position: relative;
+}
+.draggableElement .dragMe,.dragCopyWrapper .dragMe{
+    background: #2d85ad;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.draggableElement .dragMe{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.dragCopyWrapper .dragMe{
+    padding: 5px 20px;
+}
