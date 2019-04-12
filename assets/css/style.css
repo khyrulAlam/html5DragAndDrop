@@ -140,9 +140,9 @@ header{
     cursor: pointer;
 }
 .draggableElement .dragMe{
-    padding: 5px;
+    padding: 10px 5px;
     margin-bottom: 5px;
 }
 .dragCopyWrapper .dragMe{
-    padding: 5px 20px;
+    padding: 10px 20px;
 }

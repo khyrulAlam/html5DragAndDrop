@@ -52,6 +52,7 @@ __dragAll.forEach(drag => {
       //
       __dropHere.appendChild(domNote);
       domNote.style.position = "absolute";
+      domNote.style.width = "180px";
       domNote.style.zIndex = 9999;
       domNote.style.top =
         eventPageY -
@@ -91,14 +92,25 @@ function insideDrag() {
       // moveAt(event.pageX, event.pageY);
       // (**) move pointer catch
       function moveAt(pageX, pageY) {
+        // ☕️
         drag.style.left =
-          pageX -
-          (drag.offsetWidth / 2 + __dropHere.getBoundingClientRect().left) +
-          "px";
+          Math.max(
+            0,
+            Math.min(
+              highestLeft,
+              pageX -
+                (drag.offsetWidth / 2 + __dropHere.getBoundingClientRect().left)
+            )
+          ) + "px";
         drag.style.top =
-          pageY -
-          (drag.offsetHeight / 2 + __dropHere.getBoundingClientRect().top) +
-          "px";
+          Math.max(
+            0,
+            Math.min(
+              highestTop,
+              pageY -
+                (drag.offsetHeight / 2 + __dropHere.getBoundingClientRect().top)
+            )
+          ) + "px";
         // -----
         finalLeft =
           pageX -
@@ -117,20 +129,9 @@ function insideDrag() {
       document.onmouseup = function() {
         document.removeEventListener("mousemove", onMouseMove);
         document.onmouseup = null;
-        if (
-          finalTop < 0 ||
-          finalLeft < 0 ||
-          highestLeft < finalLeft ||
-          highestTop < finalTop
-        ) {
-          drag.parentNode.removeChild(drag);
-          finalObj.splice(i, 1);
-          console.log("-- finalObj --", finalObj);
-        } else {
-          finalObj[i].top = finalTop;
-          finalObj[i].left = finalLeft;
-          console.log("-- finalObj --", finalObj);
-        }
+        finalObj[i].top = finalTop;
+        finalObj[i].left = finalLeft;
+        console.log("-- finalObj --", finalObj);
       };
     };
     drag.ondragstart = function() {
